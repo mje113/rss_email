@@ -7,6 +7,8 @@ gem 'slim-rails',   '~> 2.0.1'
 gem 'coffee-rails', '~> 4.0.0'
 gem 'jquery-rails', '~> 3.0.1'
 gem 'bcrypt-ruby',  '~> 3.0.0'
+gem 'feedzirra',    '~> 0.0.24'
+gem 'feedbag',      '~> 0.9.1'
 
 group :development do
   gem 'pry',                '~> 0.9.12'
