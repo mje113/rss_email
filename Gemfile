@@ -18,7 +18,6 @@ gem 'nokogiri',             '~> 1.6.0'
 
 group :development do
   gem 'pry',                '~> 0.9.12'
-  gem 'pry-debugger',       '~> 0.2.2'
   gem 'pry-stack_explorer', '~> 0.4.9'
   gem 'puma',               '~> 2.1.1'
   gem 'rack-mini-profiler', '~> 0.1.26'
