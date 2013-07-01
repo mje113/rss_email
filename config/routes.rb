@@ -1,4 +1,8 @@
 RssEmail::Application.routes.draw do
+  
+  get  'sessions/new', as: :sign_in
+  post 'sessions/create'
+
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 

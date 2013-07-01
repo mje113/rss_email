@@ -1,3 +1,11 @@
+GIT
+  remote: git://github.com/mje113/feedbag.git
+  revision: 5c0836975090c4a8c44af81bba7fbc8da53eb49e
+  branch: refactor
+  specs:
+    feedbag (0.9.1)
+      nokogiri
+
 GEM
   remote: https://rubygems.org/
   specs:
@@ -42,8 +50,15 @@ GEM
       coffee-script-source
       execjs
     coffee-script-source (1.6.2)
+    colorize (0.5.8)
     columnize (0.3.6)
     commonjs (0.2.6)
+    coveralls (0.6.7)
+      colorize
+      multi_json (~> 1.3)
+      rest-client
+      simplecov (>= 0.7)
+      thor
     curb (0.8.4)
     debug_inspector (0.0.2)
     debugger (1.6.0)
@@ -56,8 +71,6 @@ GEM
     execjs (1.4.0)
       multi_json (~> 1.0)
     fastimage (1.4.0)
-    feedbag (0.9.1)
-      hpricot (>= 0.6)
     feedzirra (0.0.24)
       activesupport (>= 2.3.8)
       builder (>= 2.1.2)
@@ -67,7 +80,6 @@ GEM
       sax-machine (>= 0.0.12)
     guess_html_encoding (0.0.9)
     hike (1.2.3)
-    hpricot (0.8.6)
     i18n (0.6.4)
     jquery-rails (3.0.1)
       railties (>= 3.0, < 5.0)
@@ -91,6 +103,7 @@ GEM
     multi_json (1.7.7)
     nokogiri (1.6.0)
       mini_portile (~> 0.5.0)
+    parallel (0.7.1)
     pg (0.15.1)
     polyglot (0.3.3)
     pry (0.9.12.2)
@@ -127,6 +140,8 @@ GEM
     rdoc (3.12.2)
       json (~> 1.4)
     ref (1.0.5)
+    rest-client (1.6.7)
+      mime-types (>= 1.16)
     ruby-readability (0.5.7)
       guess_html_encoding (>= 0.0.4)
       nokogiri (>= 1.4.2)
@@ -135,6 +150,11 @@ GEM
     sdoc (0.3.20)
       json (>= 1.1.3)
       rdoc (~> 3.10)
+    simple_form (1.4.1)
+    simplecov (0.7.1)
+      multi_json (~> 1.0)
+      simplecov-html (~> 0.7.1)
+    simplecov-html (0.7.1)
     slim (2.0.0)
       temple (~> 0.6.5)
       tilt (~> 1.3, >= 1.3.3)
@@ -177,12 +197,14 @@ DEPENDENCIES
   better_errors (~> 0.8.0)
   binding_of_caller (~> 0.7.1)
   coffee-rails (~> 4.0.0)
+  coveralls (~> 0.6.7)
   fastimage (~> 1.4.0)
-  feedbag (~> 0.9.1)
+  feedbag!
   feedzirra (~> 0.0.24)
   jquery-rails (~> 3.0.1)
   less-rails (~> 2.3.3)
   libv8 (~> 3.11.8)
+  parallel
   pg (~> 0.15.1)
   pry (~> 0.9.12)
   pry-debugger (~> 0.2.2)
@@ -192,6 +214,7 @@ DEPENDENCIES
   rails (= 4.0.0)
   ruby-readability (~> 0.5.7)
   sdoc (~> 0.3.20)
+  simple_form
   slim-rails (~> 2.0.1)
   therubyracer (~> 0.11.4)
   uglifier (~> 1.3.0)
