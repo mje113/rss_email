@@ -6,6 +6,23 @@ GIT
     feedbag (0.9.1)
       nokogiri
 
+GIT
+  remote: git://github.com/mje113/feedzirra.git
+  revision: 87b1bb1d9642a416aeea3d7fc5581d2bb08bb475
+  specs:
+    feedzirra (0.2.0.rc2)
+      curb (~> 0.8.1)
+      loofah (~> 1.2.1)
+      nokogiri (~> 1.6.0)
+      sax-machine (~> 0.2.0.rc1)
+
+GIT
+  remote: git://github.com/mje113/sax-machine.git
+  revision: 31df14d6731f7caf570dbacbf674f15b4040d70a
+  specs:
+    sax-machine (0.2.0.rc1)
+      nokogiri (~> 1.6.0)
+
 GEM
   remote: https://rubygems.org/
   specs:
@@ -71,13 +88,6 @@ GEM
     execjs (1.4.0)
       multi_json (~> 1.0)
     fastimage (1.4.0)
-    feedzirra (0.0.24)
-      activesupport (>= 2.3.8)
-      builder (>= 2.1.2)
-      curb (>= 0.2.3)
-      loofah (>= 0.3.1)
-      nokogiri (> 0.0.0)
-      sax-machine (>= 0.0.12)
     guess_html_encoding (0.0.9)
     hike (1.2.3)
     i18n (0.6.4)
@@ -145,12 +155,12 @@ GEM
     ruby-readability (0.5.7)
       guess_html_encoding (>= 0.0.4)
       nokogiri (>= 1.4.2)
-    sax-machine (0.1.0)
-      nokogiri (> 0.0.0)
     sdoc (0.3.20)
       json (>= 1.1.3)
       rdoc (~> 3.10)
-    simple_form (1.4.1)
+    simple_form (3.0.0.rc)
+      actionpack (>= 4.0.0.rc1, < 4.1)
+      activemodel (>= 4.0.0.rc1, < 4.1)
     simplecov (0.7.1)
       multi_json (~> 1.0)
       simplecov-html (~> 0.7.1)
@@ -200,11 +210,12 @@ DEPENDENCIES
   coveralls (~> 0.6.7)
   fastimage (~> 1.4.0)
   feedbag!
-  feedzirra (~> 0.0.24)
+  feedzirra (~> 0.2.0.rc2)!
   jquery-rails (~> 3.0.1)
   less-rails (~> 2.3.3)
   libv8 (~> 3.11.8)
-  parallel
+  nokogiri (~> 1.6.0)
+  parallel (~> 0.7.1)
   pg (~> 0.15.1)
   pry (~> 0.9.12)
   pry-debugger (~> 0.2.2)
@@ -213,8 +224,9 @@ DEPENDENCIES
   rack-mini-profiler (~> 0.1.26)
   rails (= 4.0.0)
   ruby-readability (~> 0.5.7)
+  sax-machine (~> 0.2.0.rc1)!
   sdoc (~> 0.3.20)
-  simple_form
+  simple_form (~> 3.0.0.rc)
   slim-rails (~> 2.0.1)
   therubyracer (~> 0.11.4)
   uglifier (~> 1.3.0)
