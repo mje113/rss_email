@@ -53,10 +53,10 @@ GEM
     arel (4.0.0)
     atomic (1.1.10)
     bcrypt-ruby (3.0.1)
-    better_errors (0.8.0)
+    better_errors (0.9.0)
       coderay (>= 1.0.0)
       erubis (>= 2.6.6)
-    binding_of_caller (0.7.1)
+    binding_of_caller (0.7.2)
       debug_inspector (>= 0.0.1)
     builder (3.1.4)
     coderay (1.0.9)
@@ -119,7 +119,7 @@ GEM
     puma (2.1.1)
       rack (>= 1.1, < 2.0)
     rack (1.5.2)
-    rack-mini-profiler (0.1.26)
+    rack-mini-profiler (0.1.27)
       rack (>= 1.1.3)
     rack-test (0.6.2)
       rack (>= 1.0)
@@ -185,7 +185,7 @@ GEM
       polyglot
       polyglot (>= 0.3.1)
     tzinfo (0.3.37)
-    uglifier (1.3.0)
+    uglifier (2.1.1)
       execjs (>= 0.3.0)
       multi_json (~> 1.0, >= 1.0.2)
 
@@ -194,7 +194,7 @@ PLATFORMS
 
 DEPENDENCIES
   bcrypt-ruby (~> 3.0.0)
-  better_errors (~> 0.8.0)
+  better_errors (~> 0.9.0)
   binding_of_caller (~> 0.7.1)
   coffee-rails (~> 4.0.0)
   coveralls (~> 0.6.7)
@@ -203,14 +203,14 @@ DEPENDENCIES
   feedzirra (~> 0.2.0.rc2)!
   jquery-rails (~> 3.0.1)
   less-rails (~> 2.3.3)
-  libv8 (~> 3.11.8)
+  libv8 (~> 3.11.8.12)
   nokogiri (~> 1.6.0)
   parallel (~> 0.7.1)
   pg (~> 0.15.1)
   pry (~> 0.9.12)
   pry-stack_explorer (~> 0.4.9)
   puma (~> 2.1.1)
-  rack-mini-profiler (~> 0.1.26)
+  rack-mini-profiler (~> 0.1.27)
   rails (= 4.0.0)
   ruby-readability (~> 0.5.7)
   sax-machine (~> 0.2.0.rc1)!
@@ -218,4 +218,4 @@ DEPENDENCIES
   simple_form (~> 3.0.0.rc)
   slim-rails (~> 2.0.1)
   therubyracer (~> 0.11.4)
-  uglifier (~> 1.3.0)
+  uglifier (~> 2.1.1)

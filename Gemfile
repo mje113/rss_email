@@ -20,15 +20,15 @@ group :development do
   gem 'pry',                '~> 0.9.12'
   gem 'pry-stack_explorer', '~> 0.4.9'
   gem 'puma',               '~> 2.1.1'
-  gem 'rack-mini-profiler', '~> 0.1.26'
-  gem 'better_errors',      '~> 0.8.0'
+  gem 'rack-mini-profiler', '~> 0.1.27'
+  gem 'better_errors',      '~> 0.9.0'
   gem 'binding_of_caller',  '~> 0.7.1'
 end
 
 group :assets do
   gem 'therubyracer',       '~> 0.11.4', platforms: :ruby
-  gem 'uglifier',           '~> 1.3.0'
-  gem 'libv8',              '~> 3.11.8'
+  gem 'uglifier',           '~> 2.1.1'
+  gem 'libv8',              '~> 3.11.8.12'
 end
 
 group :test do
