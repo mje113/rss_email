@@ -15,6 +15,7 @@ gem 'fastimage',            '~> 1.4.0'
 gem 'simple_form',          '~> 3.0.0.rc'
 gem 'parallel',             '~> 0.7.1'
 gem 'nokogiri',             '~> 1.6.0'
+gem 'sideband'
 
 group :development do
   gem 'pry',                '~> 0.9.12'
