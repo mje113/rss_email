@@ -148,6 +148,7 @@ GEM
     sdoc (0.3.20)
       json (>= 1.1.3)
       rdoc (~> 3.10)
+    sideband (1.0.2)
     simple_form (3.0.0.rc)
       actionpack (>= 4.0.0.rc1, < 4.1)
       activemodel (>= 4.0.0.rc1, < 4.1)
@@ -215,6 +216,7 @@ DEPENDENCIES
   ruby-readability (~> 0.5.7)
   sax-machine (~> 0.2.0.rc1)!
   sdoc (~> 0.3.20)
+  sideband (~> 1.0)
   simple_form (~> 3.0.0.rc)
   slim-rails (~> 2.0.1)
   therubyracer (~> 0.11.4)
