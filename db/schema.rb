@@ -13,9 +13,6 @@
 
 ActiveRecord::Schema.define(version: 20130629103616) do
 
-  # These are extensions that must be enabled in order to support this database
-  enable_extension "plpgsql"
-
   create_table "feeds", force: true do |t|
     t.string   "name"
     t.string   "url"
@@ -23,6 +20,8 @@ ActiveRecord::Schema.define(version: 20130629103616) do
     t.datetime "created_at"
     t.datetime "updated_at"
   end
+
+  add_index "feeds", ["url"], name: "index_feeds_on_url", using: :btree
 
   create_table "stories", force: true do |t|
     t.string   "title"
@@ -35,6 +34,9 @@ ActiveRecord::Schema.define(version: 20130629103616) do
     t.datetime "updated_at"
   end
 
+  add_index "stories", ["feed_id"], name: "index_stories_on_feed_id", using: :btree
+  add_index "stories", ["permalink", "feed_id"], name: "index_stories_on_permalink_and_feed_id", unique: true, using: :btree
+
   create_table "subscriptions", force: true do |t|
     t.integer  "user_id"
     t.integer  "feed_id"
@@ -42,11 +44,16 @@ ActiveRecord::Schema.define(version: 20130629103616) do
     t.datetime "updated_at"
   end
 
+  add_index "subscriptions", ["feed_id"], name: "index_subscriptions_on_feed_id", using: :btree
+  add_index "subscriptions", ["user_id"], name: "index_subscriptions_on_user_id", using: :btree
+
   create_table "users", force: true do |t|
     t.string   "email"
     t.string   "password_digest"
     t.datetime "created_at"
     t.datetime "updated_at"
   end
+
+  add_index "users", ["email"], name: "index_users_on_email", unique: true, using: :btree
 
 end

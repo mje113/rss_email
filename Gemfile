@@ -1,7 +1,8 @@
 source 'https://rubygems.org'
 
 gem 'rails',                '4.0.0'
-gem 'pg',                   '~> 0.15.1'
+# gem 'pg',                   '~> 0.15.1'
+gem 'mysql2',               '~> 0.3.11'
 gem 'less-rails',           '~> 2.3.3'
 gem 'slim-rails',           '~> 2.0.1'
 gem 'coffee-rails',         '~> 4.0.0'

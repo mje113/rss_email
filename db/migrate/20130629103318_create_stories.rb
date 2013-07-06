@@ -9,5 +9,8 @@ class CreateStories < ActiveRecord::Migration
       t.references :feed
       t.timestamps
     end
+
+    add_index :stories, :feed_id
+    add_index :stories, [:permalink, :feed_id], unique: true
   end
 end

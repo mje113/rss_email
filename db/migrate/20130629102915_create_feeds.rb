@@ -6,5 +6,7 @@ class CreateFeeds < ActiveRecord::Migration
       t.datetime :last_fetched
       t.timestamps
     end
+
+    add_index :feeds, :url
   end
 end

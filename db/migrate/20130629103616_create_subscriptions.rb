@@ -5,5 +5,8 @@ class CreateSubscriptions < ActiveRecord::Migration
       t.references :feed
       t.timestamps
     end
+
+    add_index :subscriptions, :user_id
+    add_index :subscriptions, :feed_id
   end
 end
