@@ -25,7 +25,7 @@ class Feed < ActiveRecord::Base
     update_from_raw_feed(raw_feed)
   end
 
-  def self.batch_fetch(feeds, consumer = FeedConsumer.new)
+  def self.fetch(feeds = Feed.all, consumer = FeedConsumer.new)
     raw_feeds = consumer.batch_fetch(feeds.map(&:url))
 
     feeds.each do |raw_feed|
