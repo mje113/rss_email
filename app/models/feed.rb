@@ -26,22 +26,23 @@ class Feed < ActiveRecord::Base
   end
 
   def self.fetch(feeds = Feed.all, consumer = FeedConsumer.new)
-    raw_feeds = consumer.batch_fetch(feeds.map(&:url))
+    raw_feeds = consumer.batch_consume(feeds.map(&:url))
 
-    feeds.each do |raw_feed|
-      update_from_raw_feed(raw_feed)
+    feeds.each do |feed|
+      raw_feed = raw_feeds[feed.url]
+      feed.update_from_raw_feed(raw_feed)
     end
   end
-
-  private
 
   def update_from_raw_feed(raw_feed)
     # Add new stories
     raw_feed.new_stories(last_fetched).each do |story|
       add_story_from_raw(story)
     end
-    update_from_raw_feed(raw_feed)
+    update_feed_from_raw(raw_feed)
   end
+
+  private
 
   def update_feed_from_raw(raw_feed)
     update_attributes(

@@ -25,7 +25,15 @@ class ActiveSupport::TestCase
 
   # Add more helper methods to be used by all tests here...
 
-  def raw_stories(size)
+  def feedzirra_feed(story_size = 10)
+    OpenStruct.new(
+      title: 'My Blog',
+      last_modified: 1.day.ago,
+      entries: feedzirra_stories(story_size)
+    )
+  end
+
+  def feedzirra_stories(size)
     size.times.map { |i|
       OpenStruct.new(
         entry_id:  "entry_#{i}",

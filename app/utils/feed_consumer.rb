@@ -16,7 +16,7 @@ class FeedConsumer
   end
 
   def batch_consume(urls)
-    feeds = Parallel.map(feeds, in_threads: max_threads(urls)) { |url|
+    feeds = Parallel.map(urls, in_threads: max_threads(urls)) { |url|
       consume(url)
     }
 

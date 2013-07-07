@@ -3,7 +3,7 @@ require 'test_helper'
 class RawStoryTest < ActiveSupport::TestCase
 
   def setup
-    @feedzirra_story = raw_stories(1).first
+    @feedzirra_story = feedzirra_stories(1).first
   end
 
   test 'can normalize feedzirra story' do

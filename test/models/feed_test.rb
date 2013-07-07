@@ -20,4 +20,8 @@ class FeedTest < ActiveSupport::TestCase
     assert feeds.first.is_a?(Feed)
   end
 
+  test 'can fetch feed' do
+    
+  end
+
 end

@@ -3,11 +3,7 @@ require 'test_helper'
 class RawFeedTest < ActiveSupport::TestCase
 
   def setup
-    @feedzirra_feed = OpenStruct.new(
-      title: 'My Blog',
-      last_modified: 1.day.ago,
-      entries: raw_stories(10)
-    )
+    @feedzirra_feed = feedzirra_feed
     @raw_feed = RawFeed.new(@feedzirra_feed)
   end
 
