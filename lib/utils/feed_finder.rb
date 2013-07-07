@@ -1,7 +1,6 @@
 require 'feedbag'
-require 'parallel'
 
-class FeedFinder
+class Utils::FeedFinder
 
   def initialize(finder = Feedbag)
     @finder = finder

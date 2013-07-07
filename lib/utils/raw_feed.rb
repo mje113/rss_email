@@ -1,11 +1,11 @@
-class RawFeed
+class Utils::RawFeed
   attr_accessor :name, :stories, :last_modified
 
   def initialize(feedzirra_feed)
     @name          = feedzirra_feed.title
     @last_modified = feedzirra_feed.last_modified
     @stories = feedzirra_feed.entries.map { |entry|
-      RawStory.new(entry)
+      Utils::RawStory.new(entry)
     }
   end
 

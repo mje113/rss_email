@@ -1,10 +1,10 @@
 require 'test_helper'
 
-class FeedFinderTest < ActiveSupport::TestCase
+class Utils::FeedFinderTest < ActiveSupport::TestCase
 
   def setup
     @feedbag = Minitest::Mock.new
-    @feed_finder = FeedFinder.new(@feedbag)
+    @feed_finder = Utils::FeedFinder.new(@feedbag)
     @url = 'http://example.com/feed'
   end
   

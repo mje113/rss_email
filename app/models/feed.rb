@@ -9,7 +9,7 @@ class Feed < ActiveRecord::Base
   def self.cleanup!
   end
 
-  def self.add(url, finder = FeedFinder.new)
+  def self.add(url, finder = Utils::FeedFinder.new)
     if feed = find_by_url(url)
       Array(feed)
     else
@@ -19,13 +19,13 @@ class Feed < ActiveRecord::Base
     end
   end
 
-  def fetch(consumer = FeedConsumer.new)
+  def fetch(consumer = Utils::FeedConsumer.new)
     raw_feed = consumer.consume(self.url)
 
     update_from_raw_feed(raw_feed)
   end
 
-  def self.fetch(feeds = Feed.all, consumer = FeedConsumer.new)
+  def self.fetch(feeds = Feed.all, consumer = Utils::FeedConsumer.new)
     raw_feeds = consumer.batch_consume(feeds.map(&:url))
 
     feeds.each do |feed|

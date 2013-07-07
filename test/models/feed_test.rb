@@ -4,7 +4,7 @@ class FeedTest < ActiveSupport::TestCase
 
   def setup
     @feedbag = Minitest::Mock.new
-    @feed_finder = FeedFinder.new(@feedbag)
+    @feed_finder = Utils::FeedFinder.new(@feedbag)
     @url = 'http://example.com/feed'
     @feeds = [
       Feed.new(name: 'My Blog', url: 'http://example.com/blog'),

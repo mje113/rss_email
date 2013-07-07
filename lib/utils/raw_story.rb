@@ -1,4 +1,4 @@
-class RawStory
+class Utils::RawStory
   attr_accessor :title, :id, :published, :updated, :permalink, :body, :author
 
   def initialize(feedzirra_entry)

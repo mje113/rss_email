@@ -12,7 +12,7 @@ class Fakezirra
   end
 end
 
-class FeedConsumerTest < ActiveSupport::TestCase
+class Utils::FeedConsumerTest < ActiveSupport::TestCase
 
   def setup
     @urls = [
@@ -21,13 +21,13 @@ class FeedConsumerTest < ActiveSupport::TestCase
     ]
     @feedzirra_feed = feedzirra_feed
     @fakezirra = Fakezirra.new(@feedzirra_feed)
-    @consumer = FeedConsumer.new(@fakezirra)
+    @consumer = Utils::FeedConsumer.new(@fakezirra)
   end
   
   test 'can consume feed' do
     raw_feed = @consumer.consume(@urls.first)
 
-    assert_instance_of RawFeed, raw_feed
+    assert_instance_of Utils::RawFeed, raw_feed
   end
 
   test 'can batch consume feeds' do
@@ -36,7 +36,7 @@ class FeedConsumerTest < ActiveSupport::TestCase
     keys, values = raw_feeds.keys, raw_feeds.values
     assert_equal @urls[0], keys[0]
     assert_equal @urls[1], keys[1]
-    assert_instance_of RawFeed, values[0]
-    assert_instance_of RawFeed, values[1]
+    assert_instance_of Utils::RawFeed, values[0]
+    assert_instance_of Utils::RawFeed, values[1]
   end
 end

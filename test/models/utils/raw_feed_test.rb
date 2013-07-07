@@ -1,16 +1,16 @@
 require 'test_helper'
 
-class RawFeedTest < ActiveSupport::TestCase
+class Utils::RawFeedTest < ActiveSupport::TestCase
 
   def setup
     @feedzirra_feed = feedzirra_feed
-    @raw_feed = RawFeed.new(@feedzirra_feed)
+    @raw_feed = Utils::RawFeed.new(@feedzirra_feed)
   end
 
   test 'can normalize feedzirra feed' do
     assert_equal 'My Blog', @raw_feed.name
     @raw_feed.stories.each do |story|
-      assert story.is_a?(RawStory)
+      assert story.is_a?(Utils::RawStory)
     end
   end
 
