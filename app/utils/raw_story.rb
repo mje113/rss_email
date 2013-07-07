@@ -1,7 +1,8 @@
 class RawStory
-  attr_accessor :id, :published, :updated, :permalink, :body, :author
+  attr_accessor :title, :id, :published, :updated, :permalink, :body, :author
 
   def initialize(feedzirra_entry)
+    @title     = feedzirra_entry.title
     @id        = feedzirra_entry.entry_id
     @published = feedzirra_entry.published
     @updated   = feedzirra_entry.updated

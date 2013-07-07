@@ -25,6 +25,7 @@ ActiveRecord::Schema.define(version: 20130629103616) do
 
   create_table "stories", force: true do |t|
     t.string   "title"
+    t.string   "entry_id"
     t.string   "permalink"
     t.text     "body"
     t.datetime "published"

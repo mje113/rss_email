@@ -10,15 +10,17 @@ class FeedConsumer
     @consumer = consumer
   end
 
-  def consume(feed)
-    raw_feed = @consumer.fetch_and_parse(feed.url, user_agent: USER_AGENT)
+  def consume(url)
+    raw_feed = @consumer.fetch_and_parse(url, user_agent: USER_AGENT)
     RawFeed.new(raw_feed)
   end
 
-  def batch_consume(feeds)
-    Parallel.map(feeds, in_threads: max_threads(feeds)) { |feed|
-      consume(feed)
+  def batch_consume(urls)
+    feeds = Parallel.map(feeds, in_threads: max_threads(urls)) { |url|
+      consume(url)
     }
+
+    Hash[urls.zip(feeds)]
   end
 
   private

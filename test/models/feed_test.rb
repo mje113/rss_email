@@ -6,6 +6,10 @@ class FeedTest < ActiveSupport::TestCase
     @feedbag = Minitest::Mock.new
     @feed_finder = FeedFinder.new(@feedbag)
     @url = 'http://example.com/feed'
+    @feeds = [
+      Feed.new(name: 'My Blog', url: 'http://example.com/blog'),
+      Feed.new(name: 'Your Blog', url: 'http://sample.com/blog')
+    ]
   end
 
   test 'can add feeds' do
