@@ -25,6 +25,7 @@ group :development do
   gem 'rack-mini-profiler', '~> 0.1.27'
   gem 'better_errors',      '~> 0.9.0'
   gem 'binding_of_caller',  '~> 0.7.1'
+  gem 'cane',               '~> 2.6.0'
 end
 
 group :assets do

@@ -4,7 +4,8 @@ require 'parallel'
 class Utils::FeedConsumer
 
   MAX_THREADS = 10
-  USER_AGENT  = 'Mozilla/5.0 (Macintosh; U; Intel Mac OS X 10_6_4; en-US) AppleWebKit/533.4 (KHTML, like Gecko) Chrome/5.0.375.99 Safari/533.4'.freeze
+  USER_AGENT  = 'Mozilla/5.0 (Macintosh; U; Intel Mac OS X 10_6_4; en-US) \
+  AppleWebKit/533.4 (KHTML, like Gecko) Chrome/5.0.375.99 Safari/533.4'.freeze
 
   def initialize(consumer = Feedzirra::Feed)
     @consumer = consumer
