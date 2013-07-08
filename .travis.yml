@@ -2,3 +2,6 @@ language: ruby
 rvm:
   - 1.9.3
   - 2.0.0
+before_script:
+  - mysql -e 'create database rss_email_test;'
+  

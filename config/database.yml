@@ -8,6 +8,7 @@ development:
 test:
   adapter: mysql2 # postgresql
   database: rss_email_test
+  username: root
   host: localhost
   pool: 5
   timeout: 5000
