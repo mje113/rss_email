@@ -1,3 +1,4 @@
+# RawStory is a normalized representation of a Feedzirra entry.
 class Utils::RawStory
   attr_accessor :title, :id, :published, :updated, :permalink, :body, :author
 

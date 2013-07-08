@@ -1,6 +1,7 @@
 require 'feedzirra'
 require 'parallel'
 
+# FeedConsumer consunmes feeds and represents them as RawFeeds
 class Utils::FeedConsumer
 
   MAX_THREADS = 10

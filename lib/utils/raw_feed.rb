@@ -1,3 +1,4 @@
+# RawFeed is a class that represents a normalized Feedzirra feed.
 class Utils::RawFeed
   attr_accessor :name, :stories, :last_modified
 
